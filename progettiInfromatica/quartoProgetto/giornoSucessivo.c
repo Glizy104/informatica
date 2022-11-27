@@ -9,8 +9,6 @@ int main()
     scanf("%d %d %d", &giorno, &mese, &anno);
 
     if (mese <= 12 && mese >= 1){
-        if (giorno >= 1 && giorno <= 12){
-        
         //febbraio
         if (mese == 2){
             if ((anno % 4 == 0 && anno % 100 != 0) || (anno % 400 == 0)){
@@ -25,6 +23,8 @@ int main()
                 if (giorno == 28){
                     giorno = 1;
                     mese++;
+                }else{
+                    giorno++;
                 }
             }
         }
@@ -54,7 +54,7 @@ int main()
     }else{
         printf("!!! DATA SBAGLIATA !!! \n");
     }
-    }
+    
 
     return 0;
 }
